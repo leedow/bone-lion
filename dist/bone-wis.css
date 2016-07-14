@@ -468,6 +468,7 @@ p {
   text-align: left;
   padding-left: 66px;
   font-size: 15px;
+  cursor: pointer;
 }
 .bo-sidebar-menu .menu-item i {
   position: absolute;
@@ -2738,6 +2739,16 @@ button {
   opacity: 0;
   -webkit-transform: translate3d(0, 40px, 0);
           transform: translate3d(0, 40px, 0);
+}
+.slideContent-transition {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.slideContent-enter,
+.slideContent-leave {
+  opacity: 0;
+  -webkit-transform: translate3d(150px, 0, 0);
+          transform: translate3d(150px, 0, 0);
 }
 .pageSlide-transition {
   -webkit-transition: all .3s ease;

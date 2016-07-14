@@ -49,6 +49,11 @@ export default {
             
     }
   },
+  events: {
+    'toggle-sidebar': function(mode){
+        this.toggleSidebar(null, mode);
+    }
+  },
   props (){
     return {
 

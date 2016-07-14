@@ -1,10 +1,5 @@
 <template>
-<div class="bo-container-sys bo-container-mini">
-	<div class="bo-col-header bo-header-fixed">
-		 <header-top></header-top>
-	</div>
 
-	<sidebar></sidebar>
 	
 	<div class="bo-col-content bo-p2222">
  
@@ -36,7 +31,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 </template>
 
 <script>
@@ -45,6 +40,13 @@ import {sidebar} from '../components/sidebar'
 import {TabsSide, TabsItemSide} from '../components/tabs'
 
 export default {
+	ready: function(){
+		var _this = this;
+		setTimeout(function(){
+			_this.$dispatch('toggle-sidebar', true);		
+		}, 100)
+		
+	},
   components: {
     headerTop,
     sidebar,
