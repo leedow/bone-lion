@@ -1,10 +1,10 @@
 <template>
 <div class="bo-col-sidebar bo-sidebar-fixed" >
-	<h1 class="bo-logo">
-		智慧园区
+	<h1 class="bo-logo bo-ovf">
+		Bone Lion
 	</h1>
 	<h1 class="bo-logo-mini">
-		智
+		B
 	</h1>
 	<div id="sidemenu"> 
         <ul class="bo-sidebar-menu">

@@ -21,7 +21,7 @@
 				</tabs-item-side>
 			</tabs-side>
 
-			<div class="bo-p1111"> 
+			<div class="bo-p2222"> 
 
 			<table class="bo-table-border-all">
 				<tr>

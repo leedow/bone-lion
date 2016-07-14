@@ -1,7 +1,7 @@
 <template>
 <header class="bo-header-light">
     <div class="bo-header-dock-left">             
-        <a style="border-right:1px #eee solid" href="<?php echo site_url('/home'); ?>"><i class="iconfont">&#xe62f;</i></a>
+        <button style="border-right:1px #eee solid" @click="toggleSidebar"><i class="iconfont">&#xe62f;</i></button>
     </div>
     <ul class="bo-header-nav">
         <li class="nav-item"><a class="bo-btn-primary bo-nav-button" href="">消息 <i class="icon iconfont">&#xe63e;</i></a></li>
@@ -18,11 +18,41 @@
 </template>
 
 <script>
+import DOM from '../../helper/dom'
 
 
 export default {
   components: {
     
+  },
+  methods: {
+    toggleSidebar: function(e, mode){//mode=ture||false
+        var className = 'bo-container-mini';
+
+        
+        if(mode == undefined){
+            if( DOM.hasClass(document.body, className) ){
+                DOM.removeClass(document.body, className);
+            } else {
+                DOM.addClass(document.body, className);
+            }
+             
+            
+        } else {
+            if(mode){
+                DOM.addClass(document.body, className);
+            } else {
+                DOM.removeClass(document.body, className);
+            }
+        }
+        
+            
+    }
+  },
+  props (){
+    return {
+
+    }
   }
 }
 </script>
