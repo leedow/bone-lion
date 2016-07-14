@@ -2393,7 +2393,6 @@ button {
 .bo-dropdown-right-bottom .bo-dropdown-menu,
 .bo-dropdown-right-top .bo-dropdown-menu,
 .bo-dropdown-left-top .bo-dropdown-menu {
-  display: none;
   position: absolute;
   border: 1px #e7eaec solid;
   border-radius: 2px;

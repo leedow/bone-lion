@@ -27,7 +27,7 @@ export default {
 	            title: '系统首页',
 	            path: '/',
 	            icon: 'home',
-	            select: false,
+	            select: true,
 	            show: true
 	        },{
 	            key: 1,
