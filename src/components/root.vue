@@ -17,6 +17,9 @@ export default {
   events: {
     'toggle-sidebar': function(mode){
         this.$broadcast('toggle-sidebar', mode);
+    },
+    'toggle-back': function(mode){
+        this.$broadcast('toggle-back', mode);
     }
   },
   props (){

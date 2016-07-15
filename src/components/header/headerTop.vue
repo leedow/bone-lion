@@ -2,6 +2,7 @@
 <header class="bo-header-light">
     <div class="bo-header-dock-left">             
         <button style="border-right:1px #eee solid" @click="toggleSidebar"><i class="iconfont">&#xe62f;</i></button>
+        <button v-show="showBack" style="border-right:1px #eee solid" @click="goBack"><i class="iconfont">&#xe617;</i></button>
     </div>
     <ul class="bo-header-nav">
         <li class="nav-item"><a class="bo-btn-primary bo-nav-button" href="">消息 <i class="icon iconfont">&#xe63e;</i></a></li>
@@ -12,25 +13,25 @@
 
                 <ul class="bo-dropdown-menu" slot="dropdown" style="width: 150px;">
 
-                                <li class="bo-tab-item-icon"> 
-                                  
-                                    <a href="http://ivds.jishi88.com/index.php/page/addRoute"> 发布行程</a>
-                                </li>
+                        <li class="bo-tab-item-icon"> 
+                          
+                            <a href="http://ivds.jishi88.com/index.php/page/addRoute"> 发布行程</a>
+                        </li>
 
-                                <li class="bo-tab-item-icon"> 
-                                  
-                                    <a href="http://ivds.jishi88.com/index.php/page/editUser"> 编辑个人信息</a>
-                                </li>
+                        <li class="bo-tab-item-icon"> 
+                          
+                            <a href="http://ivds.jishi88.com/index.php/page/editUser"> 编辑个人信息</a>
+                        </li>
 
 
-                            
-                                <li class="bo-tab-item-icon"> 
-                                  
-                                    <a href="http://ivds.jishi88.com/index.php/passport/logout"> 注销登录</a>
-                                </li>
-                                
-                           
-                         </ul>
+                    
+                        <li class="bo-tab-item-icon"> 
+                          
+                            <a href="http://ivds.jishi88.com/index.php/passport/logout"> 注销登录</a>
+                        </li>
+                        
+                   
+                 </ul>
                 
             </dropdown>
         </li>
@@ -69,16 +70,22 @@ export default {
         }
         
             
+    },
+    goBack: function(){
+        window.history.go(-1);
     }
   },
   events: {
     'toggle-sidebar': function(mode){
         this.toggleSidebar(null, mode);
+    },
+    'toggle-back': function(mode){
+        this.showBack = mode;
     }
   },
   props (){
     return {
-
+        showBack: false
     }
   }
 }
