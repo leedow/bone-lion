@@ -18,7 +18,7 @@
 
 			<div class="bo-p2222"> 
 
-			<table class="bo-table-border-all">
+			<table class="bo-table-border-all" @click="test">
 				<tr>
 					<th>1111</th>
 					<th>2222</th>
@@ -45,6 +45,9 @@ export default {
 		setTimeout(function(){
 			_this.$dispatch('toggle-sidebar', true);		
 		}, 100)
+
+		this.$dispatch('toggle-back', true);
+
 		
 	},
   components: {
@@ -52,6 +55,13 @@ export default {
     sidebar,
     TabsSide,
     TabsItemSide
+  },
+  methods: {
+  	test: function(){
+  		this.$router.save('/test');
+  		this.$router.save('/test2');
+
+  	}
   }
 }
 </script>

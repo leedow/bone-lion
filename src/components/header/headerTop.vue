@@ -2,7 +2,7 @@
 <header class="bo-header-light">
     <div class="bo-header-dock-left">             
         <button style="border-right:1px #eee solid" @click="toggleSidebar"><i class="iconfont">&#xe62f;</i></button>
-        <button v-show="showBack" style="border-right:1px #eee solid" @click="goBack"><i class="iconfont">&#xe617;</i></button>
+        <button v-show="showBack" transition="slideLeft" transition-mode="out-in" style="border-right:1px #eee solid" @click="goBack"><i class="iconfont">&#xe617;</i></button>
     </div>
     <ul class="bo-header-nav">
         <li class="nav-item"><a class="bo-btn-primary bo-nav-button" href="">消息 <i class="icon iconfont">&#xe63e;</i></a></li>
@@ -73,6 +73,7 @@ export default {
     },
     goBack: function(){
         window.history.go(-1);
+        this.showBack = false;
     }
   },
   events: {
@@ -80,10 +81,12 @@ export default {
         this.toggleSidebar(null, mode);
     },
     'toggle-back': function(mode){
+
         this.showBack = mode;
+         
     }
   },
-  props (){
+  data (){
     return {
         showBack: false
     }

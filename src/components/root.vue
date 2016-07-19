@@ -19,6 +19,7 @@ export default {
         this.$broadcast('toggle-sidebar', mode);
     },
     'toggle-back': function(mode){
+  
         this.$broadcast('toggle-back', mode);
     }
   },

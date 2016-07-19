@@ -3,7 +3,7 @@ var Linker = {
 	add: function(href){
 		var old = this.history.pop();
 
-		if(old == href){
+		if(old == href || old == undefined){
 			this.history.push(href);
 		} else {
 			this.history.push(old);
@@ -11,7 +11,9 @@ var Linker = {
 		}
 
 		this.save();
+		console.log(this.history)
 	},
+	//keep:是否保留链接地址在历史
 	get: function(keep){
 		var history =  this.history.pop();
 		if(keep){

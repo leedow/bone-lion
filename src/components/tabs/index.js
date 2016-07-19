@@ -5,11 +5,14 @@ import TabsItemVertical from './item-vertical.vue'
 import TabsSide from './tabs-side.vue'
 import TabsItemSide from './item-side.vue'
 
+import TabsSidebar from './tabs-sidebar.vue'
+
 export {
 	TabsHorizon,
 	TabsItemHorizon,
 	TabsVertical,
 	TabsItemVertical,
 	TabsSide,
-	TabsItemSide
+	TabsItemSide,
+	TabsSidebar
 }
