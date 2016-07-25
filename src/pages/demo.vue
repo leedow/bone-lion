@@ -16,19 +16,10 @@
 				</tabs-item-side>
 			</tabs-side>
 
-			<div class="bo-p2222"> 
+			 
 
-			<table class="bo-table-border-all" @click="test">
-				<tr>
-					<th>1111</th>
-					<th>2222</th>
-				</tr>
-				<tr>
-					<td>1111</td>
-					<td>2222s</td>
-				</tr>
-			</table>
-			</div>
+			 <router-view></router-view>
+			 
 		</div>
 	</div>
 

@@ -1,6 +1,7 @@
-var Linker = {
+window.Linker = {
 	history: [],
 	add: function(href){
+		 
 		var old = this.history.pop();
 
 		if(old == href || old == undefined){
@@ -9,21 +10,23 @@ var Linker = {
 			this.history.push(old);
 			this.history.push(href);
 		}
-
-		this.save();
-		console.log(this.history)
+		 
+		this._save();
+		 
 	},
 	//keep:是否保留链接地址在历史
 	get: function(keep){
+		 
 		var history =  this.history.pop();
+
 		if(keep){
 			this.history.push(history);
 		}
-		this.save();
+		this._save();
 		return history?history:''
 	},
 	init: function(){
-		console.log(window.sessionStorage.linkHistory)
+		 
 		if(window.sessionStorage.linkHistory){
 			var storage;
 			try{
@@ -37,9 +40,9 @@ var Linker = {
 		} else {
 			this.history = [];
 		}
-		console.log(this.history);
+		 
 	},
-	save: function(){
+	_save: function(){
 		if(window.sessionStorage){
 			window.sessionStorage.linkHistory = JSON.stringify(this.history);
 		} else {

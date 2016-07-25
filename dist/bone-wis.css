@@ -1123,6 +1123,69 @@ button {
 .bo-form-blank .bo-form-item-noline {
   border-bottom: 0px !important;
 }
+/*
+ bone-wis主题增强表单样式，增加了适用于PC端的表单布局
+*/
+.bo-form-pc .form-notice {
+  padding: 2px 14px;
+  background: #FF6633;
+  text-align: left;
+  color: #fff;
+}
+.bo-form-pc .bo-form-item,
+.bo-form-pc .bo-form-item-lg {
+  margin-bottom: 10px;
+  padding: 0;
+  padding-left: 80px;
+  position: relative;
+}
+.bo-form-pc .bo-form-item .bo-input-wrong input,
+.bo-form-pc .bo-form-item-lg .bo-input-wrong input {
+  border-bottom: 1px #FF6633 solid !important;
+}
+.bo-form-pc .bo-form-item input,
+.bo-form-pc .bo-form-item-lg input,
+.bo-form-pc .bo-form-item select,
+.bo-form-pc .bo-form-item-lg select {
+  border: 0 !important;
+  border-bottom: 1px #e7eaec solid !important;
+  padding: 11px 16px;
+  height: 46px;
+  font-size: 16px;
+  box-shadow: none !important;
+  width: 100%;
+}
+.bo-form-pc .bo-form-item textarea,
+.bo-form-pc .bo-form-item-lg textarea {
+  border: 0 !important;
+  padding: 11px 16px;
+  width: 100%;
+  margin: 0;
+}
+.bo-form-pc .bo-form-item .input-no-label,
+.bo-form-pc .bo-form-item-lg .input-no-label {
+  padding-left: 14px;
+}
+.bo-form-pc .bo-form-item p,
+.bo-form-pc .bo-form-item-lg p {
+  padding-left: 14px;
+}
+.bo-form-pc .bo-form-item .bo-label,
+.bo-form-pc .bo-form-item-lg .bo-label {
+  width: 80px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 46px;
+  line-height: 46px;
+  text-align: right;
+  z-index: 99;
+  font-size: 16px;
+  padding-right: 14px;
+}
+.bo-form-pc .submit-btn {
+  padding-left: 98px;
+}
 .bo-box {
   text-align: left;
   background: #fff;
@@ -3031,4 +3094,10 @@ body {
   height: 0;
   line-height: 0;
   overflow: hidden;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
 }

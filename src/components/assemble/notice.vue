@@ -1,5 +1,5 @@
 <template>
-	<div class="bo-notice" v-show="show" :transition="animate" transition-mode="out-in">
+	<div id="bo-notice" v-show="show" :transition="animate" transition-mode="out-in">
 	 	{{content}}
 	</div>
 </template>

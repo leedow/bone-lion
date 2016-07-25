@@ -3,10 +3,10 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
-
 import Index from './pages/index.vue'
 import Home from './pages/home.vue'
 import Demo from './pages/demo.vue'
+import Steps from './pages/steps.vue'
 import Register	 from './pages/register.vue'
 import Linker from './addon/linker'
 
@@ -22,7 +22,7 @@ router.save = function(path){
 }
 
 router.back = function(keep){
-     router.go(Linker.get(keep));
+    router.go(Linker.get(keep));
 }
 
 router.map({
@@ -33,7 +33,12 @@ router.map({
         		component: Home
         	},
         	'/demo': {
-        		component: Demo
+        		component: Demo,
+                subRoutes: {
+                    '/steps':{
+                        component: Steps
+                    }
+                }
         	}
         }
     },
