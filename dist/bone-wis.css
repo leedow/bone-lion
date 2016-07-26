@@ -2555,7 +2555,7 @@ button {
   background: #f2f2f2;
 }
 .bo-stepline .stepline-done {
-  background: #66CC33;
+  background: #3492e6;
   height: 4px;
 }
 .bo-stepline .dock {
@@ -2572,6 +2572,7 @@ button {
   height: 32px;
   margin: 0;
   padding: 0;
+  color: #999;
 }
 .bo-stepline .dock > span {
   display: block;
@@ -2619,10 +2620,13 @@ button {
   left: 100%;
 }
 .bo-stepline .dock-done {
-  color: #66CC33;
+  color: #3492e6;
 }
 .bo-stepline .dock-done > span {
-  background: #66CC33;
+  background: #3492e6;
+}
+.bo-stepline .dock-done i {
+  color: #3492e6;
 }
 .bo-carousel {
   position: relative;

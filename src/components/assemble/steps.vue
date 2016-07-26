@@ -54,7 +54,7 @@ export default {
   		default: []
   	},
   	currentStep: {//默认所在进度位置
-  		default: 2
+  		default: 1
   	}
   },
   data (){
