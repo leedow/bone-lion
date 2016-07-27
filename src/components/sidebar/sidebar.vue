@@ -48,11 +48,11 @@ export default {
                             Linker.add(_data[key].data[i].path);
                         }
                     
-                        _data[key].data[i].select = true;
+                       // _data[key].data[i].select = true;
                         
                     } else {
                    
-                        _data[key].data[i].select = false;
+                        //_data[key].data[i].select = false;
                    
                     }
                 }

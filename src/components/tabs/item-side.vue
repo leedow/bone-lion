@@ -1,5 +1,5 @@
 <template>
-	<li class="bo-tab-item" :class="[current, size, style.disable, style.type]" data-id="{{id}}" @click="clickEvent">
+	<li class="bo-tab-item" :class="[current, size, style.disable, style.type]" data-id="{{id}}" v-link="{path:path}" @click="clickEvent">
 		<slot></slot>
 		<p v-if="tag">{{tag}}</p>
 	</li>
@@ -26,6 +26,9 @@ export default {
 		},
 		tag: {
 			default: false
+		},
+		path: {
+			default: ''
 		}
 	},
 	ready: function(){

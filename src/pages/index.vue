@@ -21,6 +21,7 @@ export default {
 		var _this = this;
 		setTimeout(function(){
 			//_this.menu.group1.show = false;
+			//_this.menu.group1.data[0].show = false;
 		}, 2000)
 	},
 	data () {
