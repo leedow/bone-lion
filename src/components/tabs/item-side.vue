@@ -1,5 +1,5 @@
 <template>
-	<li class="bo-tab-item" :class="[current, size, style.disable, style.type]" data-id="{{id}}" v-link="{path:path}" @click="clickEvent">
+	<li class="bo-tab-item" :class="[current, size, style.disable, style.type]" data-id="{{id}}" v-link="{path:path, activeClass:'bo-tab-item-current'}" @click="clickEvent">
 		<slot></slot>
 		<p v-if="tag">{{tag}}</p>
 	</li>

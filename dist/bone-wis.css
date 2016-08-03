@@ -122,7 +122,7 @@ p {
 }
 .bo-col-header {
   width: 100%;
-  padding-left: 180px;
+  padding-left: 144px;
   height: 60px;
   color: #fff;
 }
@@ -132,7 +132,7 @@ p {
   top: 0;
 }
 .bo-col-sidebar {
-  width: 180px;
+  width: 144px;
   background: #34495E;
   color: #fff;
 }
@@ -146,7 +146,7 @@ p {
   overflow-x: hidden;
   position: absolute;
   right: 0;
-  left: 180px;
+  left: 144px;
   top: 60px;
   bottom: 0;
   overflow-y: auto;
@@ -483,7 +483,8 @@ p {
   position: relative;
   text-align: left;
   padding-left: 66px;
-  font-size: 15px;
+  font-size: 16px;
+  color: #fff;
   cursor: pointer;
 }
 .bo-sidebar-menu .menu-item i {
@@ -492,10 +493,12 @@ p {
   top: 0;
   line-height: 50px;
   font-size: 28px;
+  color: #A7B1C2;
 }
 .bo-sidebar-menu .menu-item-current {
   position: relative;
   background: #293846;
+  color: #e3e6ec;
 }
 .bo-sidebar-menu .menu-item-current:after {
   position: absolute;
@@ -517,7 +520,7 @@ p {
   height: 100%;
   width: 100%;
   display: block;
-  color: #A7B1C2;
+  color: #b6becc;
 }
 #bo-dialog-layout {
   position: fixed;
@@ -2685,7 +2688,6 @@ button {
   text-align: left;
   padding: 10px 14px;
   font-weight: normal;
-  font-size: 16px;
   white-space: nowrap;
 }
 .bo-table td,
@@ -2830,6 +2832,16 @@ button {
   -webkit-transform: translate3d(40px, 0, 0);
           transform: translate3d(40px, 0, 0);
 }
+.slideRight-transition {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.slideRight-enter,
+.slideRight-leave {
+  opacity: 0;
+  -webkit-transform: translate3d(-40px, 0, 0);
+          transform: translate3d(-40px, 0, 0);
+}
 .slideUp-transition {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -2930,27 +2942,27 @@ button {
   height: 80px;
   border-radius: 40px;
 }
-.user-box .account-data {
+.account-data {
   overflow: hidden;
 }
-.user-box .account-data li {
+.account-data li {
   width: 25%;
   float: left;
 }
-.user-box .account-data li p {
+.account-data li p {
   padding: 0;
   margin: 0;
 }
-.user-box .account-data li .title {
+.account-data li .title {
   color: #999;
   font-size: 14px;
   font-weight: normal;
   padding-bottom: 10px;
 }
-.user-box .account-data li .count {
+.account-data li .count {
   font-size: 22px;
 }
-.user-box .account-data li .unit {
+.account-data li .unit {
   font-size: 11px;
 }
 .limit {
@@ -3029,6 +3041,223 @@ button {
 }
 .plan-box-lg .plan-intro li {
   padding: 13px 0;
+}
+.floor-count {
+  margin-top: -5px;
+  overflow: hidden;
+}
+.floor-count li {
+  width: 100px;
+  float: left;
+}
+.floor-count li p {
+  padding: 0;
+  margin: 0;
+}
+.floor-count li .title {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+}
+.floor-count li .count {
+  font-size: 18px;
+}
+.floor-count li .unit {
+  font-size: 11px;
+}
+.floor-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px #eee solid;
+  padding-top: 10px;
+  padding-right: 30px;
+}
+.floor-box:hover .floor-number {
+  color: #FF6633;
+  font-size: 18px;
+}
+.floor-box .floor-number {
+  color: #999;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: -15px;
+  font-size: 16px;
+}
+.room {
+  color: #fff;
+  width: 110px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.room .edit {
+  display: none;
+}
+.room .delete {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: #999;
+  font-size: 20px;
+  background: #f9f9f9;
+  display: none;
+}
+.room .delete:hover {
+  cursor: pointer;
+  color: #FF6633;
+  background: #ffffff;
+}
+.room:hover .name {
+  display: none;
+}
+.room:hover .edit {
+  display: block;
+}
+.room:hover .delete {
+  display: block;
+}
+.room-rent {
+  color: #fff;
+  width: 110px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #66CC33;
+}
+.room-rent .edit {
+  display: none;
+}
+.room-rent .delete {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: #999;
+  font-size: 20px;
+  background: #f9f9f9;
+  display: none;
+}
+.room-rent .delete:hover {
+  cursor: pointer;
+  color: #FF6633;
+  background: #ffffff;
+}
+.room-rent:hover .name {
+  display: none;
+}
+.room-rent:hover .edit {
+  display: block;
+}
+.room-rent:hover .delete {
+  display: block;
+}
+.room-unrent {
+  color: #fff;
+  width: 110px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #FF6633;
+}
+.room-unrent .edit {
+  display: none;
+}
+.room-unrent .delete {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: #999;
+  font-size: 20px;
+  background: #f9f9f9;
+  display: none;
+}
+.room-unrent .delete:hover {
+  cursor: pointer;
+  color: #FF6633;
+  background: #ffffff;
+}
+.room-unrent:hover .name {
+  display: none;
+}
+.room-unrent:hover .edit {
+  display: block;
+}
+.room-unrent:hover .delete {
+  display: block;
+}
+.room-off {
+  color: #fff;
+  width: 110px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #f2f2f2;
+  color: #999;
+}
+.room-off .edit {
+  display: none;
+}
+.room-off .delete {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: #999;
+  font-size: 20px;
+  background: #f9f9f9;
+  display: none;
+}
+.room-off .delete:hover {
+  cursor: pointer;
+  color: #FF6633;
+  background: #ffffff;
+}
+.room-off:hover .name {
+  display: none;
+}
+.room-off:hover .edit {
+  display: block;
+}
+.room-off:hover .delete {
+  display: block;
 }
 html,
 body {

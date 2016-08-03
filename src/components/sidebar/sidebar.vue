@@ -1,14 +1,14 @@
 <template>
 <div class="bo-col-sidebar bo-sidebar-fixed" >
     <h1 class="bo-logo bo-ovf">
-        Bone Lion
+        园里 ParkI n
     </h1>
     <h1 class="bo-logo-mini">
-        B
+        园
     </h1>
     <div id="sidemenu"> 
         <ul class="bo-sidebar-menu" v-for="group in data" v-if="group.show">
-            <li v-for="item in group.data" v-if="item.show" class="menu-item {{item.select?'menu-item-current':''}}" v-link="{path:item.path}" @click="clickItem(e, item.key)">
+            <li v-for="item in group.data" v-if="item.show" class="menu-item" v-link="{path:item.path, activeClass:'menu-item-current'}" @click="clickItem(e, item.key)">
                 <a>
                     <i class="icon iconfont icon-{{item.icon}}"></i>
                 {{item.title}}
@@ -48,11 +48,11 @@ export default {
                             Linker.add(_data[key].data[i].path);
                         }
                     
-                       // _data[key].data[i].select = true;
+                        _data[key].data[i].select = true;
                         
                     } else {
                    
-                        //_data[key].data[i].select = false;
+                        _data[key].data[i].select = false;
                    
                     }
                 }

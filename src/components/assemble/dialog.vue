@@ -1,8 +1,8 @@
 <template>
 	<div id="bo-dialog-layout" v-show="show" transition="fade" transition-mode="out-in">
 		<div class="bo-dialog" v-show="show" :transition="animate" transition-mode="out-in">
-			<h3 class="dialog-title">{{config.title}}</h3>
-			<div class="dialog-content">{{content}}</div>
+			<h3 class="dialog-title">{{title}}</h3>
+			<div class="dialog-content">{{content}}<slot></slot></div>
 			<div class="dialog-buttons" v-if="type=='confirm'">
 				<button class="button-no" @click="no">{{config.buttonsName[1]}}</button>
 				<button class="button-ok" @click="ok">{{config.buttonsName[0]}}</button>
@@ -23,10 +23,13 @@ export default {
 		type: {
 			default: 'alert' //alert || confirm
 		},
+		title: {
+			default: '提 醒'
+		},
 		config: {
 			default () {
 				return{
-					title: '提 醒',
+					 
 					buttonsName: ['确 定', '取 消']
 				}
 			}

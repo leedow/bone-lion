@@ -1,6 +1,6 @@
 <template>
 	<tabs-side>
-		<tabs-item-side v-for="item in tabsData" :current="item.current" :id="item.id"  :tag="item.tag">
+		<tabs-item-side v-for="item in tabsData" :current="item.current" :id="item.id" :path="item.path"  :tag="item.tag">
 				<i v-if="item.icon" class="icon iconfont icon-{{item.icon}}"></i> {{item.title}}
 		</tabs-item-side>	 
 	</tabs-side> 
