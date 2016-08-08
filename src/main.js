@@ -7,6 +7,7 @@ import Index from './pages/index.vue'
 import Home from './pages/home.vue'
 import Demo from './pages/demo.vue'
 import Steps from './pages/steps.vue'
+import Table from './pages/table.vue'
 import Register	 from './pages/register.vue'
 import Linker from './addon/linker'
 
@@ -29,7 +30,7 @@ router.map({
 	'/': {
         component: Index,
         subRoutes: {
-        	'/': {
+        	'/home': {
         		component: Home
         	},
         	'/demo': {
@@ -37,9 +38,12 @@ router.map({
                 subRoutes: {
                     '/steps':{
                         component: Steps
+                    },
+                    '/table':{
+                        component: Table
                     }
                 }
-        	}
+        	} 
         }
     },
     '/register': {

@@ -5,15 +5,13 @@
  
 		<div class="bo-box content-box" style="height: 400px">
 			<tabs-side>
-				<tabs-item-side tag="添加管理员">
-						星期一  
+				<tabs-item-side tag="可以添加标注" path="/demo/steps">
+						 步骤条
 				</tabs-item-side>
-				<tabs-item-side current=true  tag="添加管理员">
-						星期二 
+				<tabs-item-side tag="" path="/demo/table">
+						表单列表
 				</tabs-item-side>
-				<tabs-item-side  tag="添加管理员">
-						星期二 
-				</tabs-item-side>
+				 
 			</tabs-side>
 
 			 

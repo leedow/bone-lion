@@ -32,7 +32,7 @@ export default {
 					data: [{
 			            key: 0,
 			            title: '系统首页',
-			            path: '/',
+			            path: '/home',
 			            icon: 'home',
 			            select: true,
 			            show: true
@@ -50,14 +50,14 @@ export default {
 					data: [{
 			            key: 2,
 			            title: '系统首页',
-			            path: '/',
+			            path: '/test1',
 			            icon: 'home',
 			            select: false,
 			            show: true
 			        },{
 			            key: 3,
 			            title: 'DEMO组件',
-			            path: '/demo',
+			            path: '/test2',
 			            icon: 'sort',
 			            select: false,
 			            show: true

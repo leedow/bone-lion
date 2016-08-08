@@ -3259,6 +3259,54 @@ button {
 .room-off:hover .delete {
   display: block;
 }
+.user-credit {
+  width: 240px;
+  height: 120px;
+  border: 1px #eee solid;
+  border-radius: 4px;
+  padding: 15px;
+  float: left;
+}
+.user-credit:hover {
+  border: 1px #e0e0e0 solid;
+}
+.user-credit .credit-info {
+  position: relative;
+  padding-left: 95px;
+}
+.user-credit .credit-info .credit-avatar {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.user-credit .credit-info .credit-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+.user-credit .credit-info .credit-ul li {
+  border-bottom: 1px #eee solid;
+  line-height: 32px;
+  height: 32px;
+}
+.user-credit .credit-info .credit-ul .dock {
+  border-bottom: 0;
+}
+.credit-none {
+  border: 1px #eee solid;
+  border-radius: 4px;
+  line-height: 120px;
+  width: 240px;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+}
+.credit-none:hover {
+  border: 1px #e0e0e0 solid;
+  background: #f2f2f2;
+}
 html,
 body {
   margin: 0;
@@ -3333,4 +3381,17 @@ body {
 }
 .fl {
   float: left;
+}
+.bo-check {
+  font-size: 18px;
+  color: #999;
+  border: none !important;
+  background: none;
+}
+.bo-check .check-font {
+  font-size: 16px;
+}
+.bo-checked {
+  color: #3492e6;
+  border: none !important;
 }
