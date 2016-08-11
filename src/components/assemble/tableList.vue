@@ -1,10 +1,10 @@
 <template>
    <table class="bo-table-border">
     <tr>
-      <th v-for="item in config.th">
+      <th v-for="item in config.th" :style="{width: item.width}">
         {{item.title}}
       </th>
-      <th v-if="config.hasControl">操 作</th>
+      <th v-if="config.hasControl" :style="{width: config.controlWidth + 'px'}">操 作</th>
     </tr>
     <tr v-for="(index, item) in datas">
       <td v-for="item2 in config.th">
@@ -41,7 +41,7 @@ export default {
     /* @ocnfig.th
      * [{title: 'titleName', param: 'paramName'}]
      * param为当前列要显示的数据的键值
-   *
+     * 
      * @config.control
      * [{btnName}]
      */
@@ -51,6 +51,7 @@ export default {
           th: [],
           control: [],
           hasControl: true,
+          controlWidth: 180,
           keyName: ''
         }
 
