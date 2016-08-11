@@ -75,7 +75,8 @@ a:hover {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 input,
-button {
+button,
+textarea {
   -webkit-transition: all ease-in-out 0.4s !important;
   transition: all ease-in-out 0.4s !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -824,7 +825,8 @@ p {
   width: 100%;
   display: block !important;
 }
-button {
+button,
+textarea {
   outline: none;
 }
 .bo-textarea,
@@ -1164,6 +1166,7 @@ button {
   padding: 11px 16px;
   width: 100%;
   margin: 0;
+  border-bottom: 1px #e7eaec solid !important;
 }
 .bo-form-pc .bo-form-item .input-no-label,
 .bo-form-pc .bo-form-item-lg .input-no-label {
@@ -3306,6 +3309,52 @@ button {
 .credit-none:hover {
   border: 1px #e0e0e0 solid;
   background: #f2f2f2;
+}
+.fileupload-button {
+  background: none !important;
+  width: 100%;
+  border: 1px #eee solid !important;
+  padding: 80px 0 95px 0 !important;
+  color: #444 !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+}
+.fileupload-button:hover {
+  background: #f9f9f9;
+}
+.up {
+  position: relative;
+}
+.up input[type="file"] {
+  height: 100%;
+}
+.up .filename {
+  color: #999;
+  font-size: 13px;
+  padding: 0;
+  position: absolute;
+  bottom: 40px ;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.up-bg .fileupload-button {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #fff !important;
+}
+.up-bg:hover .fileupload-button {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #fff !important;
+}
+.fileupload-button:before {
+  font-family: 'iconfont';
+  content: '\e628';
+}
+.header-center {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
 }
 html,
 body {

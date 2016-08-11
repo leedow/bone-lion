@@ -1,5 +1,5 @@
 <template>
-	<a class="bo-tab-item{{current}}{{size}}" @click="clickEvent">
+	<a class="bo-tab-item{{current}}{{size}}" @click="clickEvent" v-link="{path:path, activeClass:'bo-tab-item-current'}">
 		<slot></slot>
 	</a>
 </template>
@@ -22,11 +22,14 @@ export default {
 		},
 		id: {
 			default: ""
+		},
+		path: {
+			default: ""
 		}
 	},
 	events: {
 		'tab-item-click': function(msg){ 
-			this.setCurrent(false);
+			//this.setCurrent(false);
 		}
 	},
 	methods: {
